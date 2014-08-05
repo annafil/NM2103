@@ -45,3 +45,5 @@ group :production do
   gem 'rails_12factor'
 end
 
+#Simple_form for awesome forms
+gem 'simple_form'
