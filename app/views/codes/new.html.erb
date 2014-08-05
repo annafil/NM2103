@@ -1,21 +1,17 @@
 <h1> Create Codes</h1>
 
-<%= form_for :code, url: codes_path do |f| %>
+<%= simple_form_for :code, url: codes_path do |f| %>
   <p>
-    <%= f.label :project %><br>
-    <%= f.text_field :project %>
+    <%= f.input :project, label: 'Project Name' %>
   </p>
  <p>
-   <%= f.label :expiry %><br>
-   <%= date_select(:code, :expiry) %>
+   <%= f.input :expiry, as: :date, label: 'Code expiry date' %>
  </p>
  <p>
-   <%= f.label :points %><br>
-   <%= f.number_field :points, in: 1..10 %>
+   <%= f.input :points, collection: 1..10, label: 'Number of points' %>
  </p>
   <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.input :description, as: :text %>
   </p>
  
   <p>
