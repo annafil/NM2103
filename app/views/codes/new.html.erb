@@ -1,0 +1,24 @@
+<h1> Create Codes</h1>
+
+<%= form_for :code, url: codes_path do |f| %>
+  <p>
+    <%= f.label :project %><br>
+    <%= f.text_field :project %>
+  </p>
+ <p>
+   <%= f.label :expiry %><br>
+   <%= date_select(:code, :expiry) %>
+ </p>
+ <p>
+   <%= f.label :points %><br>
+   <%= f.number_field :points, in: 1..10 %>
+ </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
