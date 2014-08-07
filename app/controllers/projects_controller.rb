@@ -10,7 +10,9 @@ class ProjectsController < ApplicationController
 	def show
 	  @project = Project.find(params[:id])
 	end
-
+	def index
+	  @projects = Project.all
+	end
 	private
 	  def project_params
 	    params.require(:project).permit(:project, :number, :name, :email, :description, :points)
