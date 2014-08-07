@@ -14,3 +14,10 @@
  *= require_self
  *= require bootstrap.min
  */
+
+.failed_with_errors {
+	color: red;
+	padding-left: 10px;
+	font-style: italic;
+	font-size: 1em;
+}
