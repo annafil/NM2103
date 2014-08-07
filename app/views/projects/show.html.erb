@@ -10,11 +10,17 @@
 		<div class="col-xs-2 col-sm-5"><%= @project.description %></div>
 	</div>
 
-	RP Points: <%= @project.points %>
- 
-  <strong>Person in charge:</strong>
-  <%= @project.name %>: <%= @project.email %>
+	<div class="row">
+		RP Points: <%= @project.points %>
+  	</div>
 
+  	<div class="row">
+  		<strong>Person in charge:</strong>
+  	 	<%= @project.name %>: <%= @project.email %>
+  	</div>
+
+ 	<div class="row">
+  		<%= link_to 'Back to all projects', projects_path %> | <%= link_to 'Edit', edit_project_path(@project) %>
+	</div>
 </div>
 
-<%= link_to 'Back to all projects', projects_path %>

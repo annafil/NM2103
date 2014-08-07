@@ -1,6 +1,6 @@
-<h3> Add Project</h3>
+<h3> Edit Project</h3>
 
-<%= simple_form_for @project, url: projects_path, defaults: { error_html: { class: 'failed_with_errors' } } do |f| %>`
+<%= simple_form_for @project, url: project_path(@project), defaults: { error_html: { class: 'failed_with_errors' } }, method: :patch do |f| %>
 
   <p><%= f.input :project, label: 'Project Name' %></p>
   <p><%= f.input :number, collection: 1..30, label: 'Internal Project Number', hint: 'The number that is used to announce the project to students' %></p>
@@ -9,7 +9,7 @@
   <p><%= f.input :description, as: :text, required: false %></p>
   <p><%= f.input :points, collection: 1..10, label: 'Number of points' %></p>
   <%= f.full_error :token %>
-  <p><%= f.submit 'Create Project' %></p>
+  <p><%= f.submit 'Update Project' %></p>
 <% end %>
 
 <%= link_to 'Back', projects_path %>

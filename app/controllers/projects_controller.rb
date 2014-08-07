@@ -2,6 +2,14 @@ class ProjectsController < ApplicationController
 	def new
 	end
 
+	def show
+	  @project = Project.find(params[:id])
+	end
+
+	def index
+	  @projects = Project.all
+	end
+
 	def create
 		@project = Project.new(project_params)
 	 
@@ -12,12 +20,18 @@ class ProjectsController < ApplicationController
 		end
 	end
 
-	def show
+	def edit
 	  @project = Project.find(params[:id])
 	end
 
-	def index
-	  @projects = Project.all
+	def update
+	  @project = Project.find(params[:id])
+	 
+	  if @project.update(project_params)
+	    redirect_to @project
+	  else
+	    render 'edit'
+	  end
 	end
 
 	private
