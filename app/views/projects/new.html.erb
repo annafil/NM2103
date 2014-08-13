@@ -1,15 +1,5 @@
 <h3> Add Project</h3>
 
-<%= simple_form_for @project, url: projects_path, defaults: { error_html: { class: 'failed_with_errors' } } do |f| %>`
-
-  <p><%= f.input :project, label: 'Project Name' %></p>
-  <p><%= f.input :number, collection: 1..30, label: 'Internal Project Number', hint: 'The number that is used to announce the project to students' %></p>
-  <p><%= f.input :name, label: 'Contact Person'%></p>
-  <p><%= f.input :email, label: 'Contact e-mail'%></p> 
-  <p><%= f.input :description, as: :text, required: false %></p>
-  <p><%= f.input :points, collection: 1..10, label: 'Number of points' %></p>
-  <%= f.full_error :token %>
-  <p><%= f.submit 'Create Project' %></p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Back', projects_path %>
