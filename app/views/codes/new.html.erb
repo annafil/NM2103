@@ -1,8 +1,9 @@
 <h1> Create Codes</h1>
 
 <%= simple_form_for :code, url: codes_path do |f| %>
+
   <p>
-    <%= f.input :project, label: 'Project Name' %>
+    <%= f.input :project, collection: @projects, label: 'Select a Project' %>
   </p>
  <p>
    <%= f.input :expiry, as: :date, label: 'Code expiry date' %>
