@@ -2,8 +2,9 @@
 
 <%= simple_form_for :code, url: codes_path do |f| %>
 
+
   <p>
-    <%= f.input :project, collection: @projects, label: 'Select a Project' %>
+    <%= f.input :project, collection: @projects.collect { |p| ("Project #" + p.number.to_s + ": " + p.project) }, label: 'Select a Project' %>
   </p>
  <p>
    <%= f.input :expiry, as: :date, label: 'Code expiry date' %>
