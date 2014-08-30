@@ -2,9 +2,11 @@ Rails.application.routes.draw do
 
   get 'admin/index'
 
-  resources :projects  
-  resources :codes
+  resources :projects do  
+    resources :codes
+  end
   resources :admin
+
 
   get 'welcome/index'
 

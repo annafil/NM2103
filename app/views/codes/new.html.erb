@@ -1,6 +1,6 @@
 <h1> Create Codes</h1>
 
-<%= simple_form_for :code, url: codes_path do |f| %>
+<%= simple_form_for :code do |f| %>
 
 
   <p>
@@ -10,12 +10,8 @@
    <%= f.input :expiry, as: :date, label: 'Code expiry date' %>
  </p>
  <p>
-   <%= f.input :points, collection: 1..10, label: 'Number of points' %>
+   <%= f.input :quantity, as: :integer, label: 'Number of codes to generate' %>
  </p>
-  <p>
-    <%= f.input :description, as: :text %>
-  </p>
- 
   <p>
     <%= f.submit 'Generate Codes' %>
   </p>
