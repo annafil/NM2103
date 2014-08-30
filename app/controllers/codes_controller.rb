@@ -1,6 +1,7 @@
 class CodesController < ApplicationController
 	def new
 	  @projects = Project.all
+	  @project = Project.find(params[:project_id])
 	end
 
 	def create

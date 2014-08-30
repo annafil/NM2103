@@ -4,7 +4,7 @@
 
 
   <p>
-    <%= f.input :project, collection: @projects.collect { |p| ("Project #" + p.number.to_s + ": " + p.project) }, label: 'Select a Project' %>
+    <%= f.input :project, :selected => @project.id, :value_method => :id,  :label_method => :project, collection: @projects, label: 'Select a Project' %>
   </p>
  <p>
    <%= f.input :expiry, as: :date, label: 'Code expiry date' %>
