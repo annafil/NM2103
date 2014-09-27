@@ -1,11 +1,29 @@
 <div class="jumbotron">
-  <h1>Welcome!</h1>
 
-  <h2>
-    This is the home page for the NM2103 Quantitative Research Methods module research participation administration for students and instructors.
-  </h2>
+      <h1>Welcome!</h1>
 
-  <p>If you are a student, please sign-up below or sign-in using the link above. If you are an instructor, please use the "Admin" link on the top right to log-in.</p>
+      <h2>
+        This is the home page for the NM2103 Research Participation for students and instructors.
+      </h2>
 
-  <%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>
+
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6">
+      <h2> Students </h2>
+      <p>If you are a student, please <%= link_to "Sign in", '#' %> or Sign-Up </p>
+
+     <%= link_to "Sign up!", '#', class: "btn btn-large btn-primary" %>
+
+    </div>
+
+    <div class="col-md-6">
+      <h2> Instructors </h2>
+          <p>If you are an instructor, please use log-in using the <%= link_to "Admin", '#' %> link.</p>
+    </div>
+
+  </div>
 </div>
