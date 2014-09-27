@@ -4,7 +4,7 @@
 
 
   <p>
-    <%= f.input :project, :selected => @project.id, :value_method => :id,  :label_method => :project, collection: @projects, label: 'Select a Project' %>
+    <%= f.input :project, :selected => @project_id, :value_method => :id,  :label_method => :project, collection: @projects, label: 'Select a Project' %>
   </p>
  <p>
    <%= f.input :expiry, as: :date, label: 'Code expiry date' %>
@@ -16,3 +16,5 @@
     <%= f.submit 'Generate Codes' %>
   </p>
 <% end %>
+
+<%= link_to 'Back to all projects', projects_path %> 
